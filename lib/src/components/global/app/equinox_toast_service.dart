@@ -15,8 +15,8 @@ class EqToastService extends StatefulWidget {
   EqToastServiceState createState() => EqToastServiceState();
 
   static EqToastServiceState of(BuildContext context) {
-    return (context.inheritFromWidgetOfExactType(_EqToastServiceInherited)
-            as _EqToastServiceInherited)
+    return (context
+            .dependOnInheritedWidgetOfExactType<_EqToastServiceInherited>())
         .data;
   }
 }
